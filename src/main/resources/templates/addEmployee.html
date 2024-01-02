@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Employee</title>
+    <link rel="stylesheet" href="path/to/styles.css" />
+</head>
+
+<body>
+
+    <div>
+        <h2>Add Employee</h2>
+
+        <!-- Display any messages if available -->
+        <div th:if="${session.message}">
+            <p th:text="${session.message.text}" th:class="${session.message.type}"></p>
+        </div>
+
+        <!-- Employee Form -->
+        <form th:action="@{/admin/addEmployee}" method="post" th:object="${employee}">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" th:field="*{name}" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" th:field="*{email}" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" th:field="*{password}" required>
+
+            <label for="country">Country:</label>
+            <input type="text" id="country" name="country" th:field="*{country}" required>
+
+            <!-- Other fields can be added similarly -->
+
+            <button type="submit">Add Employee</button>
+            <a th:href="@{/admin}" class="btn btn-secondary">Back</a>
+        </form>
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="ISO-8859-1">
+<title>Sign Up</title>
+<link rel="stylesheet" type="text/css" href="/css/signup.css"/>
+<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="main_form">
+        <h4 class="form_head">Create an account</h4>
+        <h4 class="head_follow">Add a strong password to finish up</h4>
+        <form th:action="@{/do_register}" method="post" th:object="${user}">
+            <div class="left_side">
+                <div class="form_info">
+                    <h3 class="email_heading">Email Address:</h3>
+                    <input 
+                    name="email"
+                    type="email" 
+                    placeholder="Email"
+                    required
+                    th:value="${user.email}"
+                    >
+                </div>
+                <div class="form_info">
+                    <h3 class="email_heading">Password:</h3>
+                    <input 
+                    name="password"
+                    type="password" 
+                    placeholder="password"
+                    required
+                    >
+                </div>
+                <div th:if="${session.message}" class="success_msg">
+                	Registration Successful
+                <th:block th:text="${#session.removeAttribute('message')}"></th:block>
+                
+                </div>
+                <div class="form_info">
+                    <button class="add_user" type="submit">
+                        
+                            Register
+                       
+                    </button>
+                </div>
+            </div>
+            
+            <div class="bottom_ins">
+                Reminder: by signing up, you are agreeing to our <a href=""> Privacy Policy</a> and <a href=""> Terms of Use.</a>
+            </div>
+        </form>
+    </div>
+    <script type="text/javascript">
+    $.get("/user", function(data) {
+        $("#user").html(data.name);
+        $(".unauthenticated").hide()
+        $(".authenticated").show()
+    });
+</script>
+</body>
+</html>

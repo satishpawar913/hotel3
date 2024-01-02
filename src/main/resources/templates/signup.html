@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Sign Up</title>
+	<link rel="stylesheet" href="css/signup.css">
+	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="/css/signup.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+		integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+	<div id="login">
+		<h3 class="text-center text-white pt-5"><b>Registration Form</b></h3>
+
+		<div class="container">
+			<div class="screen">
+				<div class="screen__content">
+					<form class="login" name="f" id="login-form" th:action="@{/register}" th:object="${user}" action="#"
+						method="post" onsubmit="return validateForm()">
+						<div style="text-align:center; font-size:20px; color:red; font-weight:bold">
+							<span class="error-message" th:utext="${error}"></span>
+						</div>
+						<div style="text-align:center; font-size:20px; color:green; font-weight:bold">
+							<span class="success-message" th:utext="${message}"></span>
+						</div>
+
+						<div class="login__field">
+							<i class="login__icon fas fa-user"></i>
+							<input type="text" class="login__input" name="name" placeholder="User name"
+								th:value="${user.name}" required pattern="[A-Za-z]+" title="Only characters allowed">
+						</div>
+
+						<div class="login__field">
+							<i class="login__icon fas fa-user"></i>
+							<input type="email" class="login__input" name="email" placeholder="Email"
+								th:value="${user.email}" required pattern="[a-zA-Z0-9._%+-]+@gmail\\.com$"
+								title="Enter a valid Gmail address" oninvalid="handleEmailInvalid()">
+						</div>
+						<div class="login__field">
+							<i class="login__icon fas fa-lock"></i>
+							<input type="password" class="login__input" name="password" placeholder="Password" required
+								pattern="^(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%^&*])[A-Za-z0-9!@#$%^&*]{8,}$"
+								title="Password must contain at least 8 characters, one uppercase letter, one number, and one special character">
+						</div>
+						<div>
+							<button class="button login__submit">
+								<span class="button__text">Register Here</span>
+								<i class="button__icon fas fa-chevron-right"></i>
+							</button>
+						</div>
+					</form>
+				</div>
+				<div class="screen__background">
+					<span class="screen__background__shape screen__background__shape4"></span>
+					<span class="screen__background__shape screen__background__shape3"></span>
+					<span class="screen__background__shape screen__background__shape2"></span>
+					<span class="screen__background__shape screen__background__shape1"></span>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript">
+		function validateForm() {
+			// You can add additional validation logic here if needed
+			return true; // Return false to prevent the form submission
+		}
+
+		$.get("/user", function (data) {
+			$("#user").html(data.name);
+			$(".unauthenticated").hide();
+			$(".authenticated").show();
+		});
+	</script>
+
+	<script>
+		function handleEmailInvalid() {
+			var emailInput = document.getElementsByName("email")[0];
+			if (emailInput.validity.patternMismatch) {
+				// Set custom validity message
+				emailInput.setCustomValidity("Email is already registered.");
+			}
+		}
+	</script>
+</body>
+
+</html>

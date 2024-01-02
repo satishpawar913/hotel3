@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<!-- basic -->
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- mobile metas -->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="initial-scale=1, maximum-scale=1">
+	<!-- site metas -->
+	<meta name="keywords" content="">
+	<meta name="description" content="">
+	<meta name="author" content="">
+	<!-- bootstrap css -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<!-- style css -->
+	<link rel="stylesheet" href="css/style.css">
+	<!-- Responsive-->
+	<link rel="stylesheet" href="css/responsive.css">
+	<!-- fevicon -->
+	<link rel="icon" href="images/fevicon.png" type="image/gif" />
+	<!-- Scrollbar Custom CSS -->
+	<link rel="stylesheet" href="css/jquery.mCustomScrollbar.min.css">
+	<!-- Tweaks for older IEs-->
+	<link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css"
+		media="screen">
+	<meta charset="ISO-8859-1">
+	<title>CITY PALACE JAIPUR-Restaurant</title>
+	<link rel="stylesheet" type="text/css" href="/css/restaurant.css" />
+	<link rel="stylesheet" type="text/css"
+		href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+		integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA=="
+		crossorigin="anonymous" referrerpolicy="no-referrer" />
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+	<link href="css/hotel.css" rel="stylesheet" crossorigin="anonymous">
+	<!-- JavaScript Bundle with Popper -->
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+		integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+		crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+		integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+		crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+		integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+		crossorigin="anonymous"></script>
+
+</head>
+<!-- header -->
+<header>
+	<!-- header inner -->
+	<div class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-xl-3 col-lg-3 col-md-3 col-sm-3 col logo_section">
+					<div class="full">
+						<div class="center-desk">
+							<div class="logo">
+								<a href="hotel.html"><img src="images/logo.png" alt="#" /></a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="col-xl-9 col-lg-9 col-md-9 col-sm-9">
+					<nav class="navigation navbar navbar-expand-md navbar-dark ">
+						<button class="navbar-toggler" type="button" data-toggle="collapse"
+							data-target="#navbarsExample04" aria-controls="navbarsExample04" aria-expanded="false"
+							aria-label="Toggle navigation">
+							<span class="navbar-toggler-icon"></span>
+						</button>
+						<div class="collapse navbar-collapse" id="navbarsExample04">
+							<ul class="navbar-nav mr-auto">
+								<li class="nav-item active">
+									<a class="nav-link" href="/hotel">Home</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/room_booking">Booking</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/facilities">Facilities</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/restaurant">Restaurant</a>
+								</li>
+								<li class="nav-item">
+									<a class="nav-link" href="/userdashboard">Profile</a>
+								</li>
+
+							</ul>
+						</div>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</div>
+</header>
+<!-- end header inner -->
+<!-- end header -->
+<div class="heading_container">
+	<h1>Dining: </h1>
+	<h4>
+		The CITY PALACE, JAIPUR, one of the famous palace in INDIA. A beautiful palace complex in the heart of Jaipur,
+		showcasing a blend of Rajput and Mughal architecture. It includes the Chandra Mahal and Mubarak Mahal.
+	</h4>
+</div>
+<div class="cards_conatiner">
+	<div class="restaurant_card">
+		<div class="image_container">
+			<img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/f2/a9/6c/masala-kraft.jpg"
+				alt="Sample Display Photo">
+		</div>
+		<div class="text_container">
+			<div class="name_container">
+				<h4>Masala Kraft</h4>
+			</div>
+			<div class="location_container">
+				<i class="fas fa-map-marker-alt">Apollo Bunder,Jaipur,India</i>
+			</div>
+			<div class="general_info">
+				<div class="restacontact_info">
+					<i class="fas fa-phone"></i>
+					<div class="contact_no">+91-22-6665-3278</div>
+					<div class="menu_card"><a href="images/masalakraft-1.jpg">View Menu</a></div>
+					<div class="cuisine_info">
+						The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on
+						one’s palate blending culinary innovations with traditional methods.
+					</div>
+				</div>
+			</div>
+			<div class="extra_info">
+				<div class="left">Cuisine - Contemporary Indian​</div>
+				<div>Dress code - Smart Casual</div>
+				<div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+				<div>Dinner - 7:00 PM to 11:45 PM</div>
+			</div>
+			<!--   <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div> -->
+
+		</div>
+	</div>
+	<div class="restaurant_card">
+		<div class="image_container">
+			<img src="https://b.zmtcdn.com/data/pictures/2/38472/909a199f49be83f120a7643faaffed4f.jpg?fit=around|750:500&crop=750:500;*,*"
+				alt="Sample Display Photo">
+		</div>
+		<div class="text_container">
+			<div class="name_container">
+				<h4>Golden Dragon</h4>
+			</div>
+			<div class="location_container">
+				<i class="fas fa-map-marker-alt">Apollo Bunder,Jaipur,India</i>
+			</div>
+			<div class="general_info">
+				<div class="restacontact_info">
+					<i class="fas fa-phone"></i>
+					<div class="contact_no">+91-22-6665-3278</div>
+					<div class="menu_card"><a href="images/golden-1.jpg">View Menu</a></div>
+					<div class="cuisine_info">
+						This illustrious restaurant is famous for its delectable Sichuan and Cantonese cuisines, and its
+						unique live kitchen.
+					</div>
+				</div>
+			</div>
+			<div class="extra_info">
+				<div class="left">Cuisine - Chinese​</div>
+				<div>Dress code - Smart Casual</div>
+				<div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+				<div>Dinner - 7:00 PM to 11:45 PM</div>
+			</div>
+			<!--  <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div> -->
+		</div>
+	</div>
+	<div class="restaurant_card">
+		<div class="image_container">
+			<img src="https://d4t7t8y8xqo0t.cloudfront.net/resized/600X333/restaurant%2F223193%2Frestaurant120180620125438.jpg"
+				alt="Sample Display Photo">
+		</div>
+		<div class="text_container">
+			<div class="name_container">
+				<h4>Non Veg Special</h4>
+			</div>
+			<div class="location_container">
+				<i class="fas fa-map-marker-alt">Apollo Bunder,Jaipur,India</i>
+			</div>
+			<div class="general_info">
+				<div class="restacontact_info">
+					<i class="fas fa-phone"></i>
+					<div class="contact_no">+91-22-6665-3278</div>
+					<div class="menu_card"><a href="images/nonveg.jpg">View Menu</a></div>
+					<div class="cuisine_info">
+						Shamiana, the original coffee shop of the city, offers an all-day dining experience with an
+						international à la carte menu to suit every mood and palate, from breakfast through to dinner.
+					</div>
+				</div>
+			</div>
+			<div class="extra_info">
+				<div class="left">Cuisine - Multi Cuisine​</div>
+				<div>Dress code - Smart Casual</div>
+				<div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+				<div>Dinner - 7:00 PM to 11:45 PM</div>
+			</div>
+			<!--                 <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div> -->
+		</div>
+	</div>
+	<div class="restaurant_card">
+		<div class="image_container">
+			<img src="https://static.toiimg.com/thumb/msid-24483292,width-550,height-433/24483292.jpg"
+				alt="Sample Display Photo">
+		</div>
+		<div class="text_container">
+			<div class="name_container">
+				<h4>Indian Dhaba</h4>
+			</div>
+			<div class="location_container">
+				<i class="fas fa-map-marker-alt">Apollo Bunder,Jaipur,India</i>
+			</div>
+			<div class="general_info">
+				<div class="restacontact_info">
+					<i class="fas fa-phone"></i>
+					<div class="contact_no">+91-22-6665-3278</div>
+					<div class="menu_card"><a href="images/dhaba-1.jpg">View Menu</a></div>
+					<div class="cuisine_info">
+						The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on
+						one’s palate blending culinary innovations with traditional methods.
+					</div>
+				</div>
+			</div>
+			<div class="extra_info">
+				<div class="left">Cuisine - Japanese</div>
+				<div>Dress code - Smart Casual</div>
+				<div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+				<div>Dinner - 7:00 PM to 11:45 PM</div>
+			</div>
+			<!-- <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div> -->
+		</div>
+	</div>
+	<div class="restaurant_card">
+		<div class="image_container">
+			<img src="https://cdn.venuelook.com/uploads/space_4405/1439895245_595x400.png" alt="Sample Display Photo">
+		</div>
+		<div class="text_container">
+			<div class="name_container">
+				<h4>Punjabi Thali</h4>
+			</div>
+			<div class="location_container">
+				<i class="fas fa-map-marker-alt">Apollo Bunder,Jaipur,India</i>
+			</div>
+			<div class="general_info">
+				<div class="restacontact_info">
+					<i class="fas fa-phone"></i>
+					<div class="contact_no">+91-22-6665-3278</div>
+					<div class="menu_card"><a href="images/Punjabi-Tadka.jpg">View Menu</a></div>
+					<div class="cuisine_info">
+						The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on
+						one’s palate blending culinary innovations with traditional methods.
+					</div>
+				</div>
+			</div>
+			<div class="extra_info">
+				<div class="left">Cuisine - Bakery & Delicatessen​</div>
+				<div>Dress code - Smart Casual</div>
+				<div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+				<div>Dinner - 7:00 PM to 11:45 PM</div>
+			</div>
+			<!--   <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div> -->
+		</div>
+	</div>
+	<div class="restaurant_card">
+		<div class="image_container">
+			<img src="https://media-cdn.tripadvisor.com/media/photo-s/0d/f2/ac/4d/sea-lounge.jpg"
+				alt="Sample Display Photo">
+		</div>
+		<div class="text_container">
+			<div class="name_container">
+				<h4>Sea Lounge</h4>
+			</div>
+			<div class="location_container">
+				<i class="fas fa-map-marker-alt">Apollo Bunder,Jaipur,India</i>
+			</div>
+			<div class="general_info">
+				<div class="restacontact_info">
+					<i class="fas fa-phone"></i>
+					<div class="contact_no">+91-22-6665-3278</div>
+					<div class="menu_card"><a href="images/seafood.jpg">View Menu</a></div>
+					<div class="cuisine_info">
+						The speciality Indian restaurant where hand ground spices and traditional recipes spell magic on
+						one’s palate blending culinary innovations with traditional methods.
+					</div>
+				</div>
+			</div>
+			<div class="extra_info">
+				<div class="left">Cuisine - Finger food​</div>
+				<div>Dress code - Smart Casual</div>
+				<div class="left">Lunch - 12:30 PM to 2:45 PM</div>
+				<div>Dinner - 7:00 PM to 11:45 PM</div>
+			</div>
+			<!--   <div class="reservation">
+                    <a href="">Reserve A Table</a>
+                </div> -->
+		</div>
+	</div>
+</div>
+<!--  footer -->
+<footer>
+	<div class="footer">
+		<div class="container">
+			<div class="row">
+				<div class=" col-md-4">
+					<h3>Contact US</h3>
+					<ul class="conta">
+						<li><i class="fa fa-map-marker" aria-hidden="true"></i> Address</li>
+						<li><i class="fa fa-mobile" aria-hidden="true"></i> +01 1234567895</li>
+						<li> <i class="fa fa-envelope" aria-hidden="true"></i><a href="#"> keto@gmail.com</a></li>
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h3>Menu Link</h3>
+					<ul class="link_menu">
+						<li class="active"><a href="#">Home</a></li>
+						<li><a hraef="#">Booking</a></li>
+						<li><a href="#">Facilities</a></li>
+						<li><a href="#">Restaurant</a></li>
+
+					</ul>
+				</div>
+				<div class="col-md-4">
+					<h3>News letter</h3>
+					<form class="bottom_form">
+						<input class="enter" placeholder="Enter your email" type="text" name="Enter your email">
+						<button class="sub_btn">subscribe</button>
+					</form>
+					<ul class="social_icon">
+						<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+						<li><a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="copyright">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-10 offset-md-1">
+
+						<p>
+							© 2019 All Rights Reserved. Design by <a href="https://html.design/"> Free Html
+								Templates</a>
+							<br><br>
+							Distributed by <a href="https://themewagon.com/" target="_blank">ThemeWagon</a>
+						</p>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</footer>
+<!-- end footer -->
+
+</body>
+
+</html>
